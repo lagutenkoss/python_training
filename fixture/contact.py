@@ -80,17 +80,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-
-class ContactHelperEmpty:
-
-    def __init__(self, app):
-        self.app = app
-
-    def return_to_home_page(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("home page").click()
-
-    def create(self, contact):
+    def create_empty(self, contact):
         wd = self.app.wd
         self.open_contact_page_to_add()
         # fill_contact_form
@@ -156,8 +146,4 @@ class ContactHelperEmpty:
         # contact_creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_to_home_page()
-
-    def open_contact_page_to_add(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
 
