@@ -74,6 +74,7 @@ class ContactHelper:
         self.return_to_home_page()
 
     def click_for_edit_first_contact(self):
+        wd = self.app.wd
         wd.find_element_by_xpath("//div[1]/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
 
     def delete_first_contact(self):
