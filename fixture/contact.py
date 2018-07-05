@@ -15,9 +15,12 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[3]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[2]").click()
-        # contact_creation
-        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.contact_creation()
         self.return_to_home_page()
+
+    def contact_creation(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
     def open_contact_page_to_add(self):
         wd = self.app.wd
@@ -31,7 +34,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[2]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[2]").click()
         # contact_creation
-        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.contact_creation()
         self.return_to_home_page()
 
     def fill_contact_form(self, contact):
@@ -58,8 +61,7 @@ class ContactHelper:
 
     def edit_first_contact(self, contact):
         wd = self.app.wd
-        # edit first contact
-        wd.find_element_by_xpath("//div[1]/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
+        self.click_for_edit_first_contact()
         # edit_contact_form
         self.fill_contact_form(contact)
         wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[11]").click()
@@ -70,6 +72,9 @@ class ContactHelper:
         # update group creation
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
+
+    def click_for_edit_first_contact(self):
+        wd.find_element_by_xpath("//div[1]/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -82,7 +87,7 @@ class ContactHelper:
     def modify_first_contact(self, new_contact_data):
         wd = self.app.wd
         # modify first contact
-        wd.find_element_by_xpath("//div[1]/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
+        self.click_for_edit_first_contact()
         # fill group form
         self.fill_contact_form(new_contact_data)
         # submit modification
