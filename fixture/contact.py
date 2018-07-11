@@ -3,10 +3,14 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
+    def return_to_home(self):
+        wd = self.app.wd
+        if not (wd.current_url.endswith("/addressbook.php") and len(wd.find_elements_by_link_text("Send e-Mail")) > 0):
+            wd.find_element_by_link_text("home").click()
+
     def return_to_home_page(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("/edit.php") and len(wd.find_elements_by_link_text("home page")) > 0):
-            wd.find_element_by_link_text("home page").click()
+        wd.find_element_by_link_text("home page").click()
 
     def create(self, contact):
         wd = self.app.wd
@@ -63,6 +67,7 @@ class ContactHelper:
 
     def edit_first_contact(self, contact):
         wd = self.app.wd
+        self.return_to_home()
         self.click_for_edit_first_contact()
         # edit_contact_form
         self.fill_contact_form(contact)
@@ -70,7 +75,6 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[7]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[11]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[7]").click()
-
         # update group creation
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
@@ -81,6 +85,7 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.return_to_home()
         # select first contact
         wd.find_element_by_name("selected[]").click()
         # submit deletion
@@ -89,6 +94,7 @@ class ContactHelper:
 
     def modify_first_contact(self, new_contact_data):
         wd = self.app.wd
+        self.return_to_home()
         # modify first contact
         self.click_for_edit_first_contact()
         # fill group form
