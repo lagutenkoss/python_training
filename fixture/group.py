@@ -85,7 +85,6 @@ class GroupHelper:
         wd = self.app.wd
         self.open_groups_page()
         groups = []
-        wd.find_elements_by_css_selector('span.group')
         # $$('span.group') для проверки в консоли
         for element in wd.find_elements_by_css_selector('span.group'):
             text = element.text
