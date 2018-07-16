@@ -35,19 +35,22 @@ class GroupHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def edit_first_group(self, group):
+    def edit_group_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.open_groups_page()
         # select first group
-        wd.find_element_by_name("selected[]").click()
+        self.select_group_by_index(index)
         # edit group creation
         wd.find_element_by_name("edit").click()
         # edit group form
-        self.fill_group_form(group)
+        self.fill_group_form(new_group_data)
         # update group creation
         wd.find_element_by_name("update").click()
         self.return_to_group_page()
         self.group_cache = None
+
+    def edit_first_group(self):
+        self.edit_group_by_index(0)
 
     def delete_first_group(self):
         self.delete_group_by_index(0)
