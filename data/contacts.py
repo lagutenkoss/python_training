@@ -1,9 +1,9 @@
 from model.contact import Contact
-import random
-import string
+# import random
+# import string
 
 
-constant = [
+testdata = [
     Contact(first_name="first_name1", middle_name="middle_name1", last_name="last_name1", title="title1",
             company="company1", adress="adress1", adress2="adress21", telephone="telephone1",
             mobile="mobile1", workphone="workphone1", fax="fax1", e_mail="e_mail1", mailtwo="mailtwo1",
@@ -17,7 +17,7 @@ constant = [
 ]
 
 
-def random_string(prefix, maxlen):
+'''def random_string(prefix, maxlen):
     symbols = string.ascii_letters + string.digits + string.punctuation + ' '*10
     return prefix + ''.join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
@@ -34,5 +34,5 @@ testdata = [Contact(first_name="", middle_name="", last_name="", title="", compa
     homeadress=random_string('homeadress', 25), notestwo=random_string('notestwo', 20),
     ayear=random_string('ayear', 4), byear=random_string('byear', 4))
     for i in range(5)
-]
+]'''
 
