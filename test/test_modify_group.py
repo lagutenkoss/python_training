@@ -19,7 +19,7 @@ import random
 '''
 
 
-def test_edit_some_group_with_db(db, app, check_ui):
+def test_modify_group_name_with_db(db, app, check_ui):
     if (len(db.get_group_list())) == 0:
         app.group.create(Group(name="Group name", header="Group header", footer="Group footer"))
     old_groups = db.get_group_list()
