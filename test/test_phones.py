@@ -26,13 +26,8 @@ def test_phones_on_home_page_with_db(app, db):
         assert list_db[i].last_name == list_home_page[i].last_name
         assert list_db[i].first_name == list_home_page[i].first_name
         assert list_db[i].adress == list_home_page[i].adress
-        assert list_db[i].telephone == list_home_page[i].telephone
-        assert list_db[i].mobile == list_home_page[i].mobile
-        assert list_db[i].workphone == list_home_page[i].workphone
-        assert list_db[i].homeadress == list_home_page[i].homeadress
-        assert list_db[i].e_mail == list_home_page[i].e_mail
-        assert list_db[i].email2 == list_home_page[i].email2
-        assert list_db[i].email3 == list_home_page[i].email3
+        assert merge_phones_like_on_home_page(list_db[i]) == list_home_page[i].all_phones_from_home_page
+        assert merge_emails_like_on_home_page(list_db[i]) == list_home_page[i].all_emails_from_home_page
 
 
 def test_phones_on_contact_view_page(app):
