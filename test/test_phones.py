@@ -1,5 +1,6 @@
 import re
 from random import randrange
+from model.contact import Contact
 
 
 def test_phones_on_home_page(app):
@@ -12,6 +13,26 @@ def test_phones_on_home_page(app):
     assert clear(contact_from_home_page.adress) == clear(contact_from_edit_page.adress)
     assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
     assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
+
+
+def test_phones_on_home_page_with_db(app, db):
+    contact_from_home_page = app.contact.get_contact_list()
+    list_home_page = sorted(contact_from_home_page, key=Contact.id_or_max)
+    contacts_db = db.get_contact_list()
+    list_db = sorted(contacts_db, key=Contact.id_or_max)
+    assert len(list_db) == len(list_home_page)
+    for i in range(0, len(contacts_db)):
+        assert list_db[i].id == list_home_page[i].id
+        assert list_db[i].last_name == list_home_page[i].last_name
+        assert list_db[i].first_name == list_home_page[i].first_name
+        assert list_db[i].adress == list_home_page[i].adress
+        assert list_db[i].telephone == list_home_page[i].telephone
+        assert list_db[i].mobile == list_home_page[i].mobile
+        assert list_db[i].workphone == list_home_page[i].workphone
+        assert list_db[i].homeadress == list_home_page[i].homeadress
+        assert list_db[i].e_mail == list_home_page[i].e_mail
+        assert list_db[i].email2 == list_home_page[i].email2
+        assert list_db[i].email3 == list_home_page[i].email3
 
 
 def test_phones_on_contact_view_page(app):
