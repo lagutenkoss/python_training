@@ -26,8 +26,10 @@ def test_phones_on_home_page_with_db(app, db):
         assert list_db[i].last_name == list_home_page[i].last_name
         assert list_db[i].first_name == list_home_page[i].first_name
         assert list_db[i].adress == list_home_page[i].adress
-        assert merge_phones_like_on_home_page(list_db[i]) == list_home_page[i].all_phones_from_home_page
-        assert merge_emails_like_on_home_page(list_db[i]) == list_home_page[i].all_emails_from_home_page
+        #print(merge_phones_like_on_home_page(list_db[i]))
+        #print(clear(list_home_page[i].all_phones_from_home_page))
+        assert merge_phones_like_on_home_page(list_db[i]) == clear(list_home_page[i].all_phones_from_home_page)
+        assert merge_emails_like_on_home_page(list_db[i]) == clear(list_home_page[i].all_emails_from_home_page)
 
 
 def test_phones_on_contact_view_page(app):
@@ -42,11 +44,11 @@ def test_phones_on_contact_view_page(app):
 
 
 def clear(s):
-    return re.sub('[() /-]', '',  s)
+    return re.sub("[() -]", "", s)
 
 
 def merge_phones_like_on_home_page(contact_phones):
-    return '\n'.join(filter(lambda x: x !='',
+    return '\n'.join(filter(lambda x: x != '',
                             map(lambda x: clear(x),
                                 filter(lambda x: x is not None,
                                        [contact_phones.telephone, contact_phones.mobile, contact_phones.workphone, contact_phones.homeadress]))))
@@ -57,5 +59,7 @@ def merge_emails_like_on_home_page(contact_emails):
                             map(lambda x: clear(x),
                                 filter(lambda x: x is not None,
                                        [contact_emails.e_mail, contact_emails.mailtwo, contact_emails.mailthree]))))
+
+
 
 
