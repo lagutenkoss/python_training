@@ -1,0 +1,50 @@
+{
+  "uid" : "fbe14fa431808238",
+  "name" : "test_add_group_with_db[None:nameJu :headerlxUO:footer]",
+  "title" : "Test add group with db [None:nameJu :headerlxUO:footer]",
+  "time" : {
+    "start" : 1534784758478,
+    "stop" : 1534784813511,
+    "duration" : 55033
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "623695d4a6155d4a",
+    "name" : "test.test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "4584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Александр-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_add_group"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

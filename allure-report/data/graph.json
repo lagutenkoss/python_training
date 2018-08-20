@@ -1,0 +1,69 @@
+{
+  "testCases" : [ {
+    "uid" : "7b0b796c3cde4b0a",
+    "name" : "test_add_group_with_db[None:::]",
+    "title" : "Test add group with db [None:::]",
+    "time" : {
+      "start" : 1534789579265,
+      "stop" : 1534789700258,
+      "duration" : 120993
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "f677c763c77d3dd3",
+    "name" : "test_add_group_with_db[None:name' %JQ)|= :header u ;rF9\\\\ }6@M:footerEx\\\\v5|\"-; m1)>?S]",
+    "title" : "Test add group with db [None:name' %JQ)|= :header u ;rF9\\\\ }6@M:footerEx\\\\v5|\"-; m1)>?S]",
+    "time" : {
+      "start" : 1534789700258,
+      "stop" : 1534789757832,
+      "duration" : 57574
+    },
+    "severity" : "NORMAL",
+    "status" : "FAILED"
+  }, {
+    "uid" : "5d5f51fb79720f84",
+    "name" : "test_add_group_with_db[None:nameMsL0i*pZ:header:footer D]",
+    "title" : "Test add group with db [None:nameMsL0i*pZ:header:footer D]",
+    "time" : {
+      "start" : 1534789757834,
+      "stop" : 1534789815534,
+      "duration" : 57700
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "56b1fffef1810dab",
+    "name" : "test_add_group_with_db[None:nameJu :headerlxUO:footer]",
+    "title" : "Test add group with db [None:nameJu :headerlxUO:footer]",
+    "time" : {
+      "start" : 1534789815534,
+      "stop" : 1534789873175,
+      "duration" : 57641
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "88e7b1382aa14a83",
+    "name" : "test_add_group_with_db[None:name\\\\wo:header=:footer k]",
+    "title" : "Test add group with db [None:name\\\\wo:header=:footer k]",
+    "time" : {
+      "start" : 1534789873175,
+      "stop" : 1534789930838,
+      "duration" : 57663
+    },
+    "severity" : "NORMAL",
+    "status" : "FAILED"
+  }, {
+    "uid" : "f210ea9656ca993b",
+    "name" : "test_add_group_with_db[None:name&eGw :headeru23B;NJY#f &^}\"R:footerx2]",
+    "title" : "Test add group with db [None:name&eGw :headeru23B;NJY#f &^}\"R:footerx2]",
+    "time" : {
+      "start" : 1534789930838,
+      "stop" : 1534789987860,
+      "duration" : 57022
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

@@ -1,0 +1,47 @@
+{
+  "defectsList" : [ {
+    "title" : "Product defects",
+    "status" : "FAILED",
+    "defects" : [ {
+      "uid" : "c359243d99b4d1dc",
+      "failure" : {
+        "message" : "AssertionError: assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\n  Left contains more items, first extra item: None:name' %JQ)|= :header u ;rF9\\ }6@M:footerEx\\v5|\"-; m1)>?S\n  Use -v to get the full diff",
+        "stackTrace" : "app = <fixture.application.Application object at 0x03DCFCD0>\ndb = <fixture.db.DbFixture object at 0x03DCFD30>\njson_groups = None:name' %JQ)|= :header u ;rF9\\ }6@M:footerEx\\v5|\"-; m1)>?S\ncheck_ui = None\n\n    def test_add_group_with_db(app, db, json_groups, check_ui):\n        group = json_groups\n        with pytest.allure.step(\"Given a group list\"):\n            old_groups = db.get_group_list()\n        with pytest.allure.step(\"When i add group %s to the list\" % group):\n            app.group.create(group)\n        with pytest.allure.step(\"Then the new group list is equal to the old list with the added group\"):\n            new_groups = db.get_group_list()\n            old_groups.append(group)\n>           assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)\nE           assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\nE             Left contains more items, first extra item: None:name' %JQ)|= :header u ;rF9\\ }6@M:footerEx\\v5|\"-; m1)>?S\nE             Use -v to get the full diff\n\ntest\\test_add_group.py:25: AssertionError"
+      },
+      "testCases" : [ {
+        "uid" : "f677c763c77d3dd3",
+        "name" : "test_add_group_with_db[None:name' %JQ)|= :header u ;rF9\\\\ }6@M:footerEx\\\\v5|\"-; m1)>?S]",
+        "title" : "Test add group with db [None:name' %JQ)|= :header u ;rF9\\\\ }6@M:footerEx\\\\v5|\"-; m1)>?S]",
+        "time" : {
+          "start" : 1534789700258,
+          "stop" : 1534789757832,
+          "duration" : 57574
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    }, {
+      "uid" : "bd73706fae36204a",
+      "failure" : {
+        "message" : "AssertionError: assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\n  At index 86 diff: None:name\\wo:header=:footer k != 104:namewo:header=:footer k\n  Use -v to get the full diff",
+        "stackTrace" : "app = <fixture.application.Application object at 0x03DCFCD0>\ndb = <fixture.db.DbFixture object at 0x03DCFD30>\njson_groups = None:name\\wo:header=:footer k, check_ui = None\n\n    def test_add_group_with_db(app, db, json_groups, check_ui):\n        group = json_groups\n        with pytest.allure.step(\"Given a group list\"):\n            old_groups = db.get_group_list()\n        with pytest.allure.step(\"When i add group %s to the list\" % group):\n            app.group.create(group)\n        with pytest.allure.step(\"Then the new group list is equal to the old list with the added group\"):\n            new_groups = db.get_group_list()\n            old_groups.append(group)\n>           assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)\nE           assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\nE             At index 86 diff: None:name\\wo:header=:footer k != 104:namewo:header=:footer k\nE             Use -v to get the full diff\n\ntest\\test_add_group.py:25: AssertionError"
+      },
+      "testCases" : [ {
+        "uid" : "88e7b1382aa14a83",
+        "name" : "test_add_group_with_db[None:name\\\\wo:header=:footer k]",
+        "title" : "Test add group with db [None:name\\\\wo:header=:footer k]",
+        "time" : {
+          "start" : 1534789873175,
+          "stop" : 1534789930838,
+          "duration" : 57663
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    } ]
+  }, {
+    "title" : "Test defects",
+    "status" : "BROKEN",
+    "defects" : [ ]
+  } ]
+}

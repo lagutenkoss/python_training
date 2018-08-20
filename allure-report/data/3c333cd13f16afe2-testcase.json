@@ -1,0 +1,53 @@
+{
+  "uid" : "3c333cd13f16afe2",
+  "name" : "test_add_group_with_db[None:name\\\\wo:header=:footer k]",
+  "title" : "Test add group with db [None:name\\\\wo:header=:footer k]",
+  "time" : {
+    "start" : 1534784813511,
+    "stop" : 1534784866561,
+    "duration" : 53050
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\n  At index 81 diff: None:name\\wo:header=:footer k != 99:namewo:header=:footer k\n  Use -v to get the full diff",
+    "stackTrace" : "app = <fixture.application.Application object at 0x03DD70F0>\ndb = <fixture.db.DbFixture object at 0x03DD7070>\njson_groups = None:name\\wo:header=:footer k, check_ui = None\n\n    def test_add_group_with_db(app, db, json_groups, check_ui):\n        group = json_groups\n        old_groups = db.get_group_list()\n        app.group.create(group)\n        new_groups = db.get_group_list()\n        old_groups.append(group)\n>       assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)\nE       assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\nE         At index 81 diff: None:name\\wo:header=:footer k != 99:namewo:header=:footer k\nE         Use -v to get the full diff\n\ntest\\test_add_group.py:22: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "a74d50eb67383fa6",
+    "name" : "test.test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "4584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Александр-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.test_add_group"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

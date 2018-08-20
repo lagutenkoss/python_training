@@ -1,0 +1,64 @@
+{
+  "hash" : "9ae4a52f46fbba0c959575303f697deb73e72d63",
+  "data" : [ {
+    "statistic" : {
+      "total" : 6,
+      "passed" : 4,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 2,
+      "broken" : 0
+    },
+    "time" : {
+      "start" : 1534789579265,
+      "stop" : 1534789987860,
+      "duration" : 408595
+    },
+    "name" : "total",
+    "type" : "TOTAL"
+  }, {
+    "name" : "defects",
+    "type" : "DEFECTS",
+    "data" : [ {
+      "count" : 1,
+      "message" : "AssertionError: assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\n  Left contains more items, first extra item: None:name' %JQ)|= :header u ;rF9\\ }6@M:footerEx\\v5|\"-; m1)>?S\n  Use -v to get the full diff",
+      "status" : "FAILED"
+    }, {
+      "count" : 1,
+      "message" : "AssertionError: assert [5:name&eGw :...footer D, ...] == [5:name&eGw :h...footer D, ...]\n  At index 86 diff: None:name\\wo:header=:footer k != 104:namewo:header=:footer k\n  Use -v to get the full diff",
+      "status" : "FAILED"
+    } ]
+  }, {
+    "name" : "xunit",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Test add group",
+      "statistic" : {
+        "total" : 6,
+        "passed" : 4,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 2,
+        "broken" : 0
+      }
+    } ]
+  }, {
+    "name" : "behaviors",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Without feature",
+      "statistic" : {
+        "total" : 6,
+        "passed" : 4,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 2,
+        "broken" : 0
+      }
+    } ]
+  }, {
+    "name" : "environment",
+    "type" : "KEY_VALUE",
+    "data" : [ ]
+  } ]
+}
